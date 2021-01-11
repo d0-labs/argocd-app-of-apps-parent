@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: root-appbundle-app-dev
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: default
+    name: in-cluster
+  project: appbundle-project-dev
+  source:
+    path: argocd/apps-children/dev
+    repoURL: https://github.com/d0-labs/argocd-app-of-apps-parent
+    targetRevision: HEAD
