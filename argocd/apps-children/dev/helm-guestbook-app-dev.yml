@@ -12,7 +12,7 @@ spec:
   project: appbundle-project-dev
   source:
     path: kustomized_helm/overlays/dev
-    repoURL: https://github.com/d0-labs/argocd-app-of-apps-child-guestbook
+    repoURL: https://github.com/jtmack6/argocd-app-of-apps-child-guestbook
     targetRevision: HEAD
     plugin:
       name: kustomized-helm

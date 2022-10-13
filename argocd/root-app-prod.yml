@@ -12,5 +12,5 @@ spec:
   project: appbundle-project-prod
   source:
     path: argocd/apps-children/prod
-    repoURL: https://github.com/d0-labs/argocd-app-of-apps-parent
+    repoURL: https://github.com/jtmack6/argocd-app-of-apps-parent
     targetRevision: HEAD
