@@ -11,7 +11,7 @@ spec:
     name: in-cluster
   project: appbundle-project-qa
   source:
-    path: kustomized_helm/overlays/dev
+    path: kustomized_helm/overlays/qa
     repoURL: https://github.com/jtmack6/argocd-app-of-apps-child-2048-game
     targetRevision: HEAD
     plugin:

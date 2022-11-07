@@ -1,18 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: helm-guestbook-app-qa
+  name: jekyll-site-dev
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: helm-guestbook-qa
+    namespace: jekyll-site-dev
     name: in-cluster
-  project: appbundle-project-qa
+  project: appbundle-project-dev
   source:
-    path: kustomized_helm/overlays/qa
-    repoURL: https://github.com/jtmack6/argocd-app-of-apps-child-guestbook
+    path: kustomized_helm/overlays/dev
+    repoURL: https://github.com/jtmack6/jekyll-site-app
     targetRevision: HEAD
     plugin:
       name: kustomized-helm
